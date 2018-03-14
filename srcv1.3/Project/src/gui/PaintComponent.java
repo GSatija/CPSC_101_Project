@@ -21,13 +21,13 @@ public class PaintComponent extends JComponent implements MouseListener {
     private final int myCy = 270;
     private final int myDx = 250;
     private final int myDy = 370;
-
+    boolean noClick = true;
     boolean click = false;
-    
-    Bead[] myBeads=new Bead[64];
-    
-    int turn=0;
-    
+
+    Bead[] myBeads = new Bead[64];
+
+    int turn = 0;
+
     int beadX;
     int beadY;
 
@@ -41,7 +41,7 @@ public class PaintComponent extends JComponent implements MouseListener {
         beadX = x;
         beadY = y;
     }
-   
+
     public Peg[] myPegs = {new Peg(myAx, myAy, "A1"),
         new Peg(myAx + 207, myAy - 43, "A2"),
         new Peg(myAx + 413, myAy - 86, "A3"),
@@ -67,34 +67,12 @@ public class PaintComponent extends JComponent implements MouseListener {
 
             board.draw(g2);
             int i = 0;
-            for (Peg myPeg : myPegs) {
 
+            for (Peg myPeg : myPegs) {
                 String name = myPeg.getName();
                 i++;
                 myPeg.draw(g2);
             }
-
-            /*if (player.getColour() == white && mouse click == true)
-            {
-            if peg.Height == 0
-            Bead bead1 = new Bead(20, 395);
-        }*/
-            
-            
-            
-            
-            
-            
-            
-            
-//********************************************************//
-//            if (click == true) {
-//                Bead bead = new Bead(beadX, beadY);
-//                bead.drawBlack(g2);
-//            }*/
-            
-
-
 
         } catch (IOException ex) {
             Logger.getLogger(PaintComponent.class.getName()).log(Level.SEVERE, null, ex);
@@ -113,230 +91,234 @@ public class PaintComponent extends JComponent implements MouseListener {
         }
         repaint();
         System.out.println(e.getX() + ", " + e.getY());
-        if((beadX<85)&&(beadX>50)){
-                if((beadY<470)&&(beadY>195)){
-                    if(myPegs[0].getHeight()<4){
-                        myBeads[turn]=new Bead(45,(470-(myPegs[0].getHeight()+1)*65),turn);
+        while (noClick == true) {
+            if ((beadX < 85) && (beadX > 50)) {
+                if ((beadY < 470) && (beadY > 195)) {
+                    if (myPegs[0].getHeight() < 4) {
+                        myBeads[turn] = new Bead(45, (470 - (myPegs[0].getHeight() + 1) * 65), turn);
                         myPegs[0].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX<290)&&(beadX>255)){
-                if((beadY>155)&&(beadY<425)){
-                    if(myPegs[1].getHeight()<4){
-                        myBeads[turn]=new Bead(250,(425-(myPegs[1].getHeight()+1)*65),turn);
+            if ((beadX < 290) && (beadX > 255)) {
+                if ((beadY > 155) && (beadY < 425)) {
+                    if (myPegs[1].getHeight() < 4) {
+                        myBeads[turn] = new Bead(250, (425 - (myPegs[1].getHeight() + 1) * 65), turn);
                         myPegs[1].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX<495)&&(beadX>460)){
-                if((beadY>110)&&(beadY<385)){
-                    if(myPegs[2].getHeight()<4){
-                        myBeads[turn]=new Bead(455,(385-(myPegs[2].getHeight()+1)*65),turn);
+            if ((beadX < 495) && (beadX > 460)) {
+                if ((beadY > 110) && (beadY < 385)) {
+                    if (myPegs[2].getHeight() < 4) {
+                        myBeads[turn] = new Bead(455, (385 - (myPegs[2].getHeight() + 1) * 65), turn);
                         myPegs[2].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX<705)&&(beadX>670)){
-                if((beadY>70)&&(beadY<340)){
-                    if(myPegs[3].getHeight()<4){
-                        myBeads[turn]=new Bead(665,(340-(myPegs[3].getHeight()+1)*65),turn);
+            if ((beadX < 705) && (beadX > 670)) {
+                if ((beadY > 70) && (beadY < 340)) {
+                    if (myPegs[3].getHeight() < 4) {
+                        myBeads[turn] = new Bead(665, (340 - (myPegs[3].getHeight() + 1) * 65), turn);
                         myPegs[3].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX<170)&&(beadX>135)){
-                if((beadY>300)&&(beadY<570)){
-                    if(myPegs[4].getHeight()<4){
-                        myBeads[turn]=new Bead(130,(570-(myPegs[4].getHeight()+1)*65),turn);
+            if ((beadX < 170) && (beadX > 135)) {
+                if ((beadY > 300) && (beadY < 570)) {
+                    if (myPegs[4].getHeight() < 4) {
+                        myBeads[turn] = new Bead(130, (570 - (myPegs[4].getHeight() + 1) * 65), turn);
                         myPegs[4].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>340)&&(beadX<375)){
-                if((beadY>255)&&(beadY<525)){
-                    if(myPegs[5].getHeight()<4){
-                        myBeads[turn]=new Bead(335,(525-(myPegs[5].getHeight()+1)*65),turn);
+            if ((beadX > 340) && (beadX < 375)) {
+                if ((beadY > 255) && (beadY < 525)) {
+                    if (myPegs[5].getHeight() < 4) {
+                        myBeads[turn] = new Bead(335, (525 - (myPegs[5].getHeight() + 1) * 65), turn);
                         myPegs[5].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>545)&&(beadX<580)){
-                if((beadY>210)&&(beadY<435)){
-                    if(myPegs[6].getHeight()<4){
-                        myBeads[turn]=new Bead(540,(485-(myPegs[6].getHeight()+1)*65),turn);
+            if ((beadX > 545) && (beadX < 580)) {
+                if ((beadY > 210) && (beadY < 435)) {
+                    if (myPegs[6].getHeight() < 4) {
+                        myBeads[turn] = new Bead(540, (485 - (myPegs[6].getHeight() + 1) * 65), turn);
                         myPegs[6].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>770)&&(beadX<805)){
-                if((beadY>160)&&(beadY<380)){
-                    if(myPegs[7].getHeight()<4){
-                        myBeads[turn]=new Bead(765,(430-(myPegs[7].getHeight()+1)*65),turn);
+            if ((beadX > 770) && (beadX < 805)) {
+                if ((beadY > 160) && (beadY < 380)) {
+                    if (myPegs[7].getHeight() < 4) {
+                        myBeads[turn] = new Bead(765, (430 - (myPegs[7].getHeight() + 1) * 65), turn);
                         myPegs[7].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>220)&&(beadX<255)){
-                if((beadY>400)&&(beadY<670)){
-                    if(myPegs[8].getHeight()<4){
-                        myBeads[turn]=new Bead(215,(670-(myPegs[8].getHeight()+1)*65),turn);
+            if ((beadX > 220) && (beadX < 255)) {
+                if ((beadY > 400) && (beadY < 670)) {
+                    if (myPegs[8].getHeight() < 4) {
+                        myBeads[turn] = new Bead(215, (670 - (myPegs[8].getHeight() + 1) * 65), turn);
                         myPegs[8].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>425)&&(beadX<460)){
-                if((beadY>355)&&(beadY<625)){
-                    if(myPegs[9].getHeight()<4){
-                        myBeads[turn]=new Bead(420,(625-(myPegs[9].getHeight()+1)*65),turn);
+            if ((beadX > 425) && (beadX < 460)) {
+                if ((beadY > 355) && (beadY < 625)) {
+                    if (myPegs[9].getHeight() < 4) {
+                        myBeads[turn] = new Bead(420, (625 - (myPegs[9].getHeight() + 1) * 65), turn);
                         myPegs[9].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>635)&&(beadX<670)){
-                if((beadY>310)&&(beadY<580)){
-                    if(myPegs[10].getHeight()<4){
-                        myBeads[turn]=new Bead(630,(580-(myPegs[10].getHeight()+1)*65),turn);
+            if ((beadX > 635) && (beadX < 670)) {
+                if ((beadY > 310) && (beadY < 580)) {
+                    if (myPegs[10].getHeight() < 4) {
+                        myBeads[turn] = new Bead(630, (580 - (myPegs[10].getHeight() + 1) * 65), turn);
                         myPegs[10].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>875)&&(beadX<910)){
-                if((beadY>260)&&(beadY<530)){
-                    if(myPegs[11].getHeight()<4){
-                        myBeads[turn]=new Bead(870,(530-(myPegs[11].getHeight()+1)*65),turn);
+            if ((beadX > 875) && (beadX < 910)) {
+                if ((beadY > 260) && (beadY < 530)) {
+                    if (myPegs[11].getHeight() < 4) {
+                        myBeads[turn] = new Bead(870, (530 - (myPegs[11].getHeight() + 1) * 65), turn);
                         myPegs[11].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>300)&&(beadX<335)){
-                if((beadY>500)&&(beadY<770)){
-                    if(myPegs[12].getHeight()<4){
-                        myBeads[turn]=new Bead(295,(770-(myPegs[12].getHeight()+1)*65),turn);
+            if ((beadX > 300) && (beadX < 335)) {
+                if ((beadY > 500) && (beadY < 770)) {
+                    if (myPegs[12].getHeight() < 4) {
+                        myBeads[turn] = new Bead(295, (770 - (myPegs[12].getHeight() + 1) * 65), turn);
                         myPegs[12].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>525)&&(beadX<560)){
-                if((beadY>445)&&(beadY<715)){
-                    if(myPegs[13].getHeight()<4){
-                        myBeads[turn]=new Bead(520,(715-(myPegs[13].getHeight()+1)*65),turn);
+            if ((beadX > 525) && (beadX < 560)) {
+                if ((beadY > 445) && (beadY < 715)) {
+                    if (myPegs[13].getHeight() < 4) {
+                        myBeads[turn] = new Bead(520, (715 - (myPegs[13].getHeight() + 1) * 65), turn);
                         myPegs[13].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>750)&&(beadX<785)){
-                if((beadY>390)&&(beadY<660)){
-                    if(myPegs[14].getHeight()<4){
-                        myBeads[turn]=new Bead(745,(660-(myPegs[14].getHeight()+1)*65),turn);
+            if ((beadX > 750) && (beadX < 785)) {
+                if ((beadY > 390) && (beadY < 660)) {
+                    if (myPegs[14].getHeight() < 4) {
+                        myBeads[turn] = new Bead(745, (660 - (myPegs[14].getHeight() + 1) * 65), turn);
                         myPegs[14].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
-            if((beadX>975)&&(beadX<1010)){
-                if((beadY>335)&&(beadY<605)){
-                    if(myPegs[15].getHeight()<4){
-                        myBeads[turn]=new Bead(970,(605-(myPegs[15].getHeight()+1)*65),turn);
+            if ((beadX > 975) && (beadX < 1010)) {
+                if ((beadY > 335) && (beadY < 605)) {
+                    if (myPegs[15].getHeight() < 4) {
+                        myBeads[turn] = new Bead(970, (605 - (myPegs[15].getHeight() + 1) * 65), turn);
                         myPegs[15].addBead(myBeads[turn]);
                         System.out.println("Test");
                         turn++;
+                        noClick = false;
                         repaint();
-                    }
-                    else{
+                    } else {
                         System.out.println("Peg full");
                     }
                 }
             }
+            
+        }
+        
     }
 
     @Override
@@ -356,4 +338,9 @@ public class PaintComponent extends JComponent implements MouseListener {
     public void mouseExited(MouseEvent e) {
     }
 
+    
+    public void resetClick()
+    {
+        noClick = true;
+    }
 }
