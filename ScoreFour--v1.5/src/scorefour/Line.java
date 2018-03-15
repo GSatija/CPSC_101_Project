@@ -43,16 +43,19 @@ public class Line {
 
         }
 
-        try {
-            if (color.compareTo(pegs[indexnumber].array[0].c)
-                    && color.compareTo(pegs[indexnumber + 4].array[1].c)
-                    && color.compareTo(pegs[indexnumber + 8].array[2].c)
-                    && color.compareTo(pegs[indexnumber + 12].array[3].c)) {
-                return true;
-            }
-        } catch (NullPointerException e) {
+        // check
 
-        }
+            try {
+                if (color.compare(pegs[indexnumber].array[0].c)
+                        && color.compare(pegs[indexnumber + 4].array[1].c)
+                        && color.compare(pegs[indexnumber + 8].array[2].c)
+                        && color.compareTo(pegs[indexnumber + 12].array[3].c)) {
+                    return true;
+                }
+            } catch (NullPointerException e) {
+
+            }
+
 //    try {
 //
 //        if (color.compareTo(pegs[indexnumber + 4].array[height - 1].c)
@@ -67,7 +70,7 @@ public class Line {
         //******
 
 
-
+/* Repeated
         try {
             if (color.compareTo(pegs[indexnumber].array[0].c)
                     && color.compareTo(pegs[indexnumber].array[1].c)
@@ -78,13 +81,13 @@ public class Line {
         } catch (NullPointerException e) {
 
         }
-
+*/
         //****
 
         try {
 
 
-            indexnumber = (indexPeg / 4) * 4;
+            indexnumber = (indexPeg / 4) * 4;   // This is important
 
             if (color.compareTo(pegs[indexnumber].array[height].c)
                     && color.compareTo(pegs[indexnumber + 1].array[height].c)
