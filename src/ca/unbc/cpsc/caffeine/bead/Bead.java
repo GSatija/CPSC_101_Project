@@ -53,39 +53,18 @@ public class Bead {
         }
     }
 
-    public Color getColour() {
-        Color color = c;
-        System.out.println(color.getRed() + " " + color.getBlue() + " " + color.getGreen() + " " + white.getRed() + " " + white.getGreen() + " " + white.getBlue());
-        return c;
+    public String toString(Color clr) {
+
+
+        if(clr.getBlue()==255){
+        return "White";}
+
+        return "Black";
+
     }
-
-    public Color getColor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
     public boolean compareTo(Color c2) {
 
         return c.getRGB() == c2.getRGB();
     }
 
 }
-
-/*
-
-String colour;
-
-bead class getColour()
-{
-return colour;
-}
-
-
-
-(in drawWHite)
-{
-colour = white;
-}
-
-vica versa for bl
- */
