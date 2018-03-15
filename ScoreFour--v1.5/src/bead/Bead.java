@@ -68,6 +68,16 @@ public class Bead {
 
         return c.getRGB() == c2.getRGB();
     }
+    
+    public String toString(Color clr) {
+
+
+        if(clr.getBlue()==255){
+        return "White";}
+
+        return "Black";
+
+    }
 
 }
 
