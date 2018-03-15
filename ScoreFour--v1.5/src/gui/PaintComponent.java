@@ -130,7 +130,8 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[0], 0, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                       JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
+
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -162,7 +163,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[1], 1, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -196,7 +197,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[2], 2, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                           JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -229,7 +230,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[3], 3, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -262,7 +263,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[4], 4, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                           JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -295,7 +296,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[5], 5, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                           JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -328,7 +329,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[6], 6, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -361,7 +362,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[7], 7, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                          JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -394,7 +395,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[8], 8, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                          JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -427,7 +428,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[9], 9, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -460,7 +461,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[10], 10, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -493,7 +494,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[11], 11, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -526,7 +527,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[12], 12, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -559,7 +560,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[13], 13, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                            JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -592,7 +593,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[14], 14, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                           JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
@@ -625,7 +626,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                         boolean value = line.check(myPegs[15], 15, myPegs);
                         if (value == true) {
                             System.err.println(" yippee");
-                            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                           JOptionPane.showMessageDialog(null,"Player "+myBeads[turn-1].c.toString()+ " won");
                             int i = 0;
                             while (i < 16) {
                                 myPegs[i].clearPeg();
