@@ -15,33 +15,35 @@ public class Bead {
     int myTurn;
     BufferedImage bead;
     public Color c;
+    public String colour;
 
     public Bead(int x, int y, int myTurn) {
         myX = x;
         myY = y;
         this.myTurn = myTurn;
         if (myTurn % 2 == 0) {
-            c = white;
+            c = Color.WHITE;
+            colour = "White";
         } else {
-            c = black;
+            c = Color.BLACK;
+            colour = "Black";
         }
     }
 
-    public void drawWhite(Graphics g, int x, int y) throws IOException {
-        Graphics2D g2 = (Graphics2D) g;
-        myX = x;
-        myY = y;
-        bead = ImageIO.read(new File("images\\beadWhite.png"));
-        g2.drawImage(bead, myX - 20, myY - 20, null);
-    }
-
-    public void drawBlack(Graphics g) throws IOException {
-        Graphics2D g2 = (Graphics2D) g;
-        bead = ImageIO.read(new File("images\\beadBlack.png"));
-        g2.drawImage(bead, myX - 20, myY - 20, null);
-
-    }
-
+//    public void drawWhite(Graphics g, int x, int y) throws IOException {
+//        Graphics2D g2 = (Graphics2D) g;
+//        myX = x;
+//        myY = y;
+//        bead = ImageIO.read(new File("images\\beadWhite.png"));
+//        g2.drawImage(bead, myX - 20, myY - 20, null);
+//    }
+//
+//    public void drawBlack(Graphics g) throws IOException {
+//        Graphics2D g2 = (Graphics2D) g;
+//        bead = ImageIO.read(new File("images\\beadBlack.png"));
+//        g2.drawImage(bead, myX - 20, myY - 20, null);
+//
+//    }
     public void draw(Graphics g) throws IOException {
         Graphics2D g2 = (Graphics2D) g;
         if ((myTurn % 2) == 0) {
@@ -53,17 +55,11 @@ public class Bead {
         }
     }
 
-    public String toString(Color clr) {
-
-
-        if(clr.getBlue()==255){
-        return "White";}
-
-        return "Black";
-
+    public String getColour() {
+        return colour;
     }
-    public boolean compareTo(Color c2) {
 
+    public boolean compareTo(Color c2) {
         return c.getRGB() == c2.getRGB();
     }
 

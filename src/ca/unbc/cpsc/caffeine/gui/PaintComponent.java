@@ -201,7 +201,7 @@ public class PaintComponent extends JComponent implements MouseListener {
                 boolean value = line.check(myPegs[k], k, myPegs);
                 if (value == true) {
                     System.err.println("yippee");
-                    JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+                    JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c.toString() + " won");
                     gameWon = true;
                     System.out.println(gameWon);
                 }
@@ -224,7 +224,7 @@ public class PaintComponent extends JComponent implements MouseListener {
         lastMove = myPegs[j].getName();
         if (value == true) {
             System.err.println(" yippee");
-            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c + " won");
+            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].getColour() + " won");
             gameWon = true;
             System.out.println(gameWon);
         }

@@ -65,21 +65,21 @@ public class GuiHandler {
 
                     //timer for 5 seconds
                     board.getDog();
-                    if (board.aiMoved()) {
-                        if (nextTurn == true) {
-                            label.setText("It is Currently " + player1.getName() + "'s turn.");
-                            textBox.setText("Last Turn:\n\n" + player2.getName() + " placed a bead on peg " + board.getLastMove() + "\n\n\n\n\n\n\nPlace a bead then submit your move.");
-                            blackBead.setVisible(false);
-                            whiteBead.setVisible(true);
-                            nextTurn = false;
-                        } else {
-                            label.setText("It is Currently " + player2.getName() + "'s turn.");
-                            textBox.setText("Last Turn:\n\n" + player1.getName() + " placed a bead on peg " + board.getLastMove() + "\n\n\n\n\n\n\nPlace a bead then submit your move.");
-                            blackBead.setVisible(true);
-                            whiteBead.setVisible(false);
-                            nextTurn = true;
-                        }
-                    }
+//                    if (board.aiMoved()) {
+//                        if (nextTurn == true) {
+//                            label.setText("It is Currently " + player1.getName() + "'s turn.");
+//                            textBox.setText("Last Turn:\n\n" + player2.getName() + " placed a bead on peg " + board.getLastMove() + "\n\n\n\n\n\n\nPlace a bead then submit your move.");
+//                            blackBead.setVisible(false);
+//                            whiteBead.setVisible(true);
+//                            nextTurn = false;
+//                        } else {
+//                            label.setText("It is Currently " + player2.getName() + "'s turn.");
+//                            textBox.setText("Last Turn:\n\n" + player1.getName() + " placed a bead on peg " + board.getLastMove() + "\n\n\n\n\n\n\nPlace a bead then submit your move.");
+//                            blackBead.setVisible(true);
+//                            whiteBead.setVisible(false);
+//                            nextTurn = true;
+//                        }
+//                    }
 
                     if (board.beadPlaced()) {
                         if (nextTurn == true) {
