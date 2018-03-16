@@ -67,6 +67,7 @@ public class Game {
         Player player1 = new Player(name1, colour);
         Player player2 = new Player(name2, colour2);
 
+        //gui.computer(booelan)
         gui.createWindow(player1, player2);
     }
 

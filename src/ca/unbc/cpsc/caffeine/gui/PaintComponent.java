@@ -45,7 +45,7 @@ public class PaintComponent extends JComponent implements MouseListener {
 
     Random ran = new Random();
     int j = ran.nextInt(15);
-    int k;
+    int k = 16;
 
     private boolean gameWon = false;
 
@@ -188,25 +188,30 @@ public class PaintComponent extends JComponent implements MouseListener {
                 k = 13;
             } else if ((beadX > 750) && (beadX < 785) && ((beadY > 390) && (beadY < 660))) {
                 k = 14;
-            } else {
+            } else if ((beadX > 975) && (beadX < 1010) && ((beadY > 335) && (beadY < 605))) {
                 k = 15;
             }
 
-            if (myPegs[k].getHeight() < 4) {
-                myBeads[turn] = new Bead(40 + myPegs[k].getLocation()[0], (405 + myPegs[k].getLocation()[1] - (myPegs[k].getHeight() + 1) * 65), turn);
-                myPegs[k].addBead(myBeads[turn]);
-                turn++;
-                noClick = false;
-                repaint();
-                boolean value = line.check(myPegs[k], k, myPegs);
-                if (value == true) {
-                    System.err.println("yippee");
-                    JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].c.toString() + " won");
-                    gameWon = true;
-                    System.out.println(gameWon);
-                }
-                lastMove = myPegs[k].getName();
+            if (k < 16) {
+                if (myPegs[k].getHeight() < 4) {
+                    myBeads[turn] = new Bead(40 + myPegs[k].getLocation()[0], (405 + myPegs[k].getLocation()[1] - (myPegs[k].getHeight() + 1) * 65), turn);
+                    myPegs[k].addBead(myBeads[turn]);
+                    turn++;
+                    noClick = false;
+                    repaint();
+                    boolean value = line.check(myPegs[k], k, myPegs);
+                    if (value == true) {
+                        System.err.println("yippee");
+                        JOptionPane.showMessageDialog(null, myBeads[turn - 1].getColour() + " wins!");
+                        gameWon = true;
+                        System.out.println(gameWon);
+                    }
+                    lastMove = myPegs[k].getName();
+                    k = 16;
 
+                } else {
+                    System.out.println("Peg full");
+                }
             }
         }
 
@@ -224,7 +229,7 @@ public class PaintComponent extends JComponent implements MouseListener {
         lastMove = myPegs[j].getName();
         if (value == true) {
             System.err.println(" yippee");
-            JOptionPane.showMessageDialog(null, "Player " + myBeads[turn - 1].getColour() + " won");
+            JOptionPane.showMessageDialog(null, myBeads[turn - 1].getColour() + " wins!");
             gameWon = true;
             System.out.println(gameWon);
         }

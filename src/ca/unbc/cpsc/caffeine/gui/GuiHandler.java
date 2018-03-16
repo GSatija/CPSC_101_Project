@@ -64,7 +64,12 @@ public class GuiHandler {
                 if (!board.gameWon()) {
 
                     //timer for 5 seconds
+                    
+                    
                     board.getDog();
+                    
+                    
+                    
 //                    if (board.aiMoved()) {
 //                        if (nextTurn == true) {
 //                            label.setText("It is Currently " + player1.getName() + "'s turn.");
