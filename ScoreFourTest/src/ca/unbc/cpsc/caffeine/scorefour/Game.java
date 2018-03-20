@@ -76,6 +76,8 @@ public class Game {
             twoComp = true;
             name1 = "fuck";
             name2 = "Jarvis";
+        } else {
+            System.exit(0);
         }
 
         System.out.println(choice);
